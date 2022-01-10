@@ -45,4 +45,11 @@ public class Bestellung {
                 ", produkteList=" + produkteList +
                 '}';
     }
+
+    public int gesamtPreis(){
+        int preis = 0;
+        for (Produkt produkt : produkteList)
+            preis += produkt.getPreis();
+        return preis;
+    }
 }
